@@ -6,21 +6,23 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import logoImg from "./../assets/images/logo.svg";
 import mobileLogoImg from "./../assets/images/logo_white.svg";
 
-import {NavDropdown} from "react-bootstrap";
-import {useEffect, useState} from "react";
-import {Link, useNavigate} from "react-router";
+import { NavDropdown } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router";
 
 function Header() {
     const [show, setShow] = useState(false);
+    const [showOffcanvas, setShowOffcanvas] = useState(false);
     const navigate = useNavigate();
 
     const handleClick = () => {
         navigate("/products-services");
+        setShowOffcanvas(false); // Close offcanvas after navigating
     };
 
     const [scrollY, setScrollY] = useState(0);
     const [scrollDir, setScrollDir] = useState("up");
-    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992); // Bootstrap 'lg'
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 992);
 
     useEffect(() => {
         const handleResize = () => {
@@ -64,9 +66,11 @@ function Header() {
                             className="d-inline-block align-top"
                         />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="headerOffCanvas" className="btn-primary"/>
+                    <Navbar.Toggle onClick={() => setShowOffcanvas(true)} aria-controls="headerOffCanvas" className="btn-primary" />
                     <Navbar.Offcanvas
                         id="headerOffCanvas"
+                        show={showOffcanvas}
+                        onHide={() => setShowOffcanvas(false)}
                         aria-labelledby="headerOffCanvasLabel"
                         placement="start"
                         className="text-white"
@@ -85,27 +89,25 @@ function Header() {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="mx-auto flex-lg-row flex-column text-black">
-                                <Nav.Link as={Link} to="/" className="fw-medium px-3">Home</Nav.Link>
-                                <Nav.Link as={Link} to="/about-us" className="fw-medium px-3">About
-                                    Us</Nav.Link>
+                                <Nav.Link as={Link} to="/" className="fw-medium px-3" onClick={() => setShowOffcanvas(false)}>Home</Nav.Link>
+                                <Nav.Link as={Link} to="/about-us" className="fw-medium px-3" onClick={() => setShowOffcanvas(false)}>About Us</Nav.Link>
 
                                 <div
                                     className="fw-medium px-3"
                                     onMouseEnter={() => setShow(true)}
                                     onMouseLeave={() => setShow(false)}
-                                    style={{cursor: "pointer"}}
+                                    style={{ cursor: "pointer" }}
                                 >
                                     <NavDropdown
                                         show={show}
-                                        key={show ? 'show' : 'hide'} // Adding a key for re-rendering when dropdown toggles
+                                        key={show ? 'show' : 'hide'}
                                         id="navbarScrollingDropdown"
                                         title={
                                             <span className="d-inline-flex align-items-center fw-medium"
-                                                  onClick={handleClick}>
+                                                onClick={handleClick}>
                                                 Products &amp; Services
-                                                <i aria-hidden="true"
-                                                   className="jki jki-chevron-down-light ms-2"/>
-                                              </span>
+                                                <i aria-hidden="true" className="jki jki-chevron-down-light ms-2" />
+                                            </span>
                                         }
                                         as="div"
                                     >
@@ -113,6 +115,7 @@ function Header() {
                                             as={Link}
                                             to="/franchise-opportunity"
                                             className="fw-medium p-3 text-14"
+                                            onClick={() => setShowOffcanvas(false)}
                                         >
                                             Franchise Opportunity
                                         </NavDropdown.Item>
@@ -120,6 +123,7 @@ function Header() {
                                             as={Link}
                                             to="/what-franchisees-do"
                                             className="fw-medium p-3 text-14"
+                                            onClick={() => setShowOffcanvas(false)}
                                         >
                                             What Franchisees Do
                                         </NavDropdown.Item>
@@ -127,13 +131,14 @@ function Header() {
                                             as={Link}
                                             to="/investment-opportunities"
                                             className="fw-medium p-3 text-14"
+                                            onClick={() => setShowOffcanvas(false)}
                                         >
                                             Investment Opportunities
                                         </NavDropdown.Item>
                                     </NavDropdown>
                                 </div>
 
-                                <Nav.Link as={Link} to="/contact-us" className="fw-medium px-3">
+                                <Nav.Link as={Link} to="/contact-us" className="fw-medium px-3" onClick={() => setShowOffcanvas(false)}>
                                     Contact Us
                                 </Nav.Link>
                             </Nav>

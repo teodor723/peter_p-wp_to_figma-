@@ -16,12 +16,12 @@ const badgeAndTexts1 = [
     {
         badge: "jki-map-marker1-light",
         title: "Head Office:",
-        description: "Communications House, 9 Saint John's Street, Colchester CO2 7NN",
+        description: "3rd Floor, 86-90 Paul Street, London, EC2A 4NE, United Kingdom",
     },
     {
         badge: "jki-email1-light",
         title: "Email:",
-        description: <a href="mailto:franchise@velaagent.com" className="text-black">franchise@velaagent.com</a>,
+        description: <a href="mailto:franchise@vela-agent.com" className="text-black">franchise@vela-agent.com</a>,
     },
 ]
 
