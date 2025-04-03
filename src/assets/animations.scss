@@ -1,0 +1,56 @@
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(var(--fade-in-up-offset, 20px));
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HoverTranslateY.css */
+.hover-translate-y {
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+    z-index: 2;
+    position: relative;
+}
+
+.hover-translate-y:hover {
+    transform: translateY(var(--hover-offset, -10px));
+}
+
+/* HoverBgChange.css */
+.hover-bg-change {
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-bg-change::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: var(--overlay-color, #00E1FF30);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hover-bg-change:hover::after {
+    opacity: 1;
+}

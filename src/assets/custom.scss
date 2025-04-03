@@ -1,0 +1,421 @@
+:root {
+    --bs-font-sans-serif: "Orbitron";
+    --bs-nav-link-font-size: 14px;
+    --bs-heading-color: #000;
+    --bs-body-font-size: 14px;
+    --bs-border-radius: 50px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    @media(max-width: 991px) {
+        --bs-body-font-size: 13px;
+    }
+}
+
+#homeHeroSection {
+    overflow: hidden;
+    padding: 290px 0 0 0;
+    z-index: 1;
+    @media(max-width: 991px) {
+        padding: 160px 10px 60px 10px;
+    }
+
+    .overlay {
+        inset: 0;
+        position: absolute;
+        background-color: transparent;
+        background-image: radial-gradient(at center center, #01141D 0%, #053F48 76%);
+        opacity: 0.2;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+        @media(max-width: 991px) {
+            background-image: radial-gradient(at center center, #01141D 0%, #00E1FF24 76%);
+        }
+    }
+}
+
+#homeHeroSection img {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 940px;
+    width: 100%;
+}
+
+#homeHeroSection .row {
+    padding-bottom: 200px;
+    @media(max-width: 991px) {
+        padding-bottom: 60px;
+    }
+}
+
+.badge-and-text-card {
+    background-color: transparent;
+    text-align: left;
+    background-image: radial-gradient(at top right, #00E1FF24 0%, #FFFFFF 50%);
+    padding: 40px 40px 40px 40px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #FFF;
+    border-radius: 10px 10px 10px 10px;
+
+    i {
+        font-size: 32px;
+    }
+}
+
+.overlay-animate-card {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+
+    .overlay {
+        background-color: transparent;
+        text-align: left;
+        background-image: radial-gradient(at top center, #7BDFFF52 4%, #03222CF7 100%);
+        padding: 80px 40px 30px 30px;
+        border-style: solid;
+        border-width: 0 0 0 0;
+        border-radius: 10px 10px 10px 10px;
+        height: 100%;
+    }
+
+    .content {
+        margin-bottom: -50px;
+    }
+
+    i {
+        font-size: 65px;
+    }
+
+    a {
+        color: rgb(46, 218, 241);
+
+    }
+}
+
+#homeOverlayAnimateCard .col-md-6 {
+    &:nth-child(1) {
+        .overlay-animate-card {
+            background-image: url("./images/human-like-robot-and-artificial-intelligence-e1674142456108.jpg");
+        }
+    }
+
+    &:nth-child(2) {
+        .overlay-animate-card {
+            background-image: url("./images/robot-s-hands-typing-on-keyboard.jpg");
+        }
+    }
+
+    &:nth-child(3) {
+        .overlay-animate-card {
+            background-image: url("./images/neon-ai-on-a-keyboard.jpg");
+        }
+    }
+
+    &:nth-child(4) {
+        .overlay-animate-card {
+            background-image: url("./images/globe-hologram-futuristic-tech-and-woman-technology-innovation-with-future-ai-and-cyberspace-aga.jpg");
+        }
+    }
+}
+
+
+.product-offering-card {
+    background-color: rgb(1, 20, 29);
+    border-radius: 20px;
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .plan {
+        font-size: 15px;
+        letter-spacing: 1.4px;
+    }
+
+    .description {
+        font-size: 0.7rem;
+        font-weight: 300;
+    }
+
+    .features {
+        font-size: 14px;
+        line-height: 1.8em;
+    }
+}
+
+.br-10 {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.business-model-revenue-streams-card {
+    .white-text-block {
+        margin-top: -80px;
+    }
+}
+
+
+#homeHeroFooterSection {
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding: 0 0 0 0;
+    z-index: 1;
+
+    .overlay {
+        inset: 0;
+        background-color: transparent;
+        background-image: radial-gradient(at center center, #01141D 0%, #021420 94%);
+        opacity: 0.18;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+
+    img {
+        left: 100px;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    ul {
+        list-style-position: inside;
+    }
+}
+
+.section-radial-gradient-bg {
+    background-color: transparent;
+    background-image: radial-gradient(at center center, #00E1FF24 0%, #FFFFFF 70%);
+}
+
+
+section.page-banner {
+    margin-top: 141px;
+    margin-bottom: 0;
+    padding: 140px 0 140px 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 991px) {
+        padding: 60px 10px 60px 10px;
+    }
+
+    &#aboutUsPageBanner {
+        background-image: url("./images/digital-innovation-businessman-hologram-watch-and-ai-technology-digital-transformation-abstract-i.jpg");
+    }
+
+    &#productServicesPageBanner {
+        background-image: url("./images/female-engineer-man-working-at-industrial-robot-in-factory-industrial-robotic-and-manufacturing.jpg");
+    }
+
+    &#investmentOpportunitiesPageBanner {
+        background-image: url("./images/2151003702.jpg");
+    }
+
+    &#whatFranchiseesDoPageBanner {
+        background-image: url("./images/female-engineer-man-working-at-industrial-robot-in-factory-industrial-robotic-and-manufacturing.jpg");
+    }
+
+    &#franchiseOpportunityPageBanner {
+        background-image: url("./images/AdobeStock_626609517-980x551-1.jpg");
+    }
+
+    &#contactUsPageBanner {
+        background-image: url("./images/digital-innovation-businessman-hologram-watch-and-ai-technology-digital-transformation-abstract-i.jpg");
+    }
+
+    .overlay {
+        background-color: #01141D;
+        opacity: 0.66;
+        inset: 0;
+        position: absolute;
+    }
+
+    h1 {
+        font-size: 48px;
+        @media (max-width: 991px) {
+            font-size: 26px;
+        }
+    }
+}
+
+
+#productServicesOverlayAnimateCard {
+    .col-md-4 {
+        &:nth-child(1) {
+            .overlay-animate-card {
+                background-image: url("./images/human-like-robot-and-artificial-intelligence-e1674142456108.jpg");
+            }
+        }
+
+        &:nth-child(2) {
+            .overlay-animate-card {
+                background-image: url("./images/neon-ai-on-a-keyboard-e1677549051447.jpg");
+            }
+        }
+
+        &:nth-child(3) {
+            .overlay-animate-card {
+                background-image: url("./images/industry-4-0-young-engineer-works-at-a-robotic-arm.jpg");
+            }
+        }
+    }
+
+    .col-md-6 {
+        &:nth-child(1) {
+            .overlay-animate-card {
+                background-image: url("./images/globe-hologram-futuristic-tech-and-woman-technology-innovation-with-future-ai-and-cyberspace-aga.jpg");
+            }
+        }
+
+        &:nth-child(2) {
+            .overlay-animate-card {
+                background-image: url("./images/digital-innovation-businessman-hologram-watch-and-ai-technology-digital-transformation-abstract-i.jpg");
+            }
+        }
+    }
+
+    .overlay {
+        padding: 180px 30px 20px 30px;
+    }
+}
+
+#franchiseOpportunityOverlayAnimateCard {
+    .col-md-3 {
+        &:nth-child(1) {
+            .overlay-animate-card {
+                background-image: url("./images/human-like-robot-and-artificial-intelligence-e1674142456108.jpg");
+            }
+        }
+
+        &:nth-child(2) {
+            .overlay-animate-card {
+                background-image: url("./images/neon-ai-on-a-keyboard-e1677549051447.jpg");
+            }
+        }
+
+        &:nth-child(3) {
+            .overlay-animate-card {
+                background-image: url("./images/industry-4-0-young-engineer-works-at-a-robotic-arm.jpg");
+            }
+        }
+
+        &:nth-child(4) {
+            .overlay-animate-card {
+                background-image: url("./images/alex-knight-2EJCSULRwC8-unsplash-1.jpg");
+            }
+        }
+    }
+
+    .overlay {
+        padding: 148px 30px 62px 30px;
+    }
+}
+
+.table > :not(caption) > * > * {
+    padding: 12px;
+}
+
+.responsive-table {
+    @media (max-width: 991px) {
+        &,
+        & tbody,
+        & tr,
+        & td {
+            display: block;
+            width: 100%;
+        }
+        td {
+            text-align: right;
+            padding: 10px;
+            position: relative;
+            border: 1px solid #ddd;
+
+            &:before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-align: left;
+                position: absolute;
+                left: 10px;
+                color: #333;
+            }
+        }
+        tr {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background: #fff;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .d-lg-table-header-group {
+        display: table-header-group !important;
+    }
+    .w-lg-auto {
+        width: auto !important;
+    }
+}
+
+.franchise-opportunity-image-card {
+    background-image: url("./images/robot-s-hands-typing-on-keyboard.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000; // your overlay color
+        border-radius: inherit;
+        opacity: 0.6;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 0 40px;
+    }
+}
+
+.contact-form {
+    background-color: transparent;
+    background-image: radial-gradient(at top right, #00E1FF24 0%, #FFFFFF 50%);
+    border-radius: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #FFFFFF29;
+
+    .form-label {
+        font-weight: 500;
+    }
+
+    .form-control {
+        background-color: #F6F7FA;
+        border-style: solid;
+        border-width: 1px 1px 1px 1px;
+        border-color: #EAECF1;
+        padding: 15px 24px 17px 24px;
+        border-radius: 6px;
+    }
+}
+
+.about-us-image-overlay:before {
+    content: "";
+    background-color: rgb(24, 150, 254);
+    opacity: 0.12;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
