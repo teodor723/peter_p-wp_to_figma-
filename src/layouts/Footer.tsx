@@ -76,7 +76,7 @@ function Footer() {
                     />
                 </Navbar.Brand>
                 <div className="order-2 mb-4 w-100 w-lg-auto">
-                    <Nav.Link as={Link} to="/privacy-policy" className="fw-medium text-black px-3 d-inline-block">PRIV POLICY</Nav.Link>
+                    <Nav.Link as={Link} to="/privacy-policy" className="fw-medium text-black px-3 d-inline-block">Privacy Policy</Nav.Link>
                     <Nav.Link as={Link} to="/terms-conditions" className="fw-medium text-black px-3 d-inline-block">T & C's</Nav.Link>
                 </div>
             </div>

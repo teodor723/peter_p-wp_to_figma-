@@ -90,7 +90,7 @@ function WhatFranchiseesDo() {
                                 <p className="text-inter text-16 mb-5 mt-4">
                                     It’s simple: your role is to introduce Vela to businesses.
                                     You don’t need technical expertise—just ambition and outreach. The product and
-                                    platform sell themselves.<br/>
+                                    platform sell themselves.<br/><br/>
                                     <b>No Stock, No Outlay, No Overheads</b>
                                 </p>
                             </div>

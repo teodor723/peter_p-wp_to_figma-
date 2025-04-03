@@ -150,7 +150,7 @@ function InvestmentOpportunities() {
                                     <p className="text-inter text-16">
                                         With Vela Agent, you’re not just automating communication—you’re creating
                                         intelligent customer journeys that drive loyalty and profitability.
-                                        <br/>
+                                        <br/><br/>
                                         <b>Now is the time to act!</b>
                                     </p>
                                 </div>

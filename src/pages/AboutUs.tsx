@@ -96,7 +96,7 @@ function AboutUs() {
                                     LTD, we’ve reimagined how organisations connect, communicate, and grow. We are
                                     proud to be at the forefront of a commercial revolution, delivering cutting-edge,
                                     AI-driven unified communications solutions that empower modern businesses to thrive
-                                    in a digital-first world.<br/>
+                                    in a digital-first world.<br/><br/>
                                     Our platform isn’t just smart—it’s transformative.
                                 </p>
                                 <Button variant="secondary" as={Link as any} to="/products-services" className="mb-5 mb-lg-0">Learn
@@ -116,10 +116,13 @@ function AboutUs() {
                                 <p className="text-inter text-16 mb-5">
                                     At the heart of Vela Agent is a revolutionary AI-powered assistant that
                                     integrates seamlessly with any website or phone system, acting as the most
-                                    knowledgeable and efficient member of a company’s team.<br/>
+                                    knowledgeable and efficient member of a company’s team.
+                                    <br/><br/>
                                     Unlike traditional support tools, Vela is pre-trained with everything a business
                                     wants their customers to know—sales and product information, pricing, processes,
-                                    policies, FAQs, and more. It eliminates the need for customers to wait on hold or
+                                    policies, FAQs, and more.
+                                    <br/><br/>
+                                    It eliminates the need for customers to wait on hold or
                                     speak to multiple departments. Instead, they simply ask Vela and receive
                                     accurate, instant answers.
                                 </p>
